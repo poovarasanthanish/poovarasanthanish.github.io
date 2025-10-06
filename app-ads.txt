@@ -1,5 +1,3 @@
-google.com, pub-6758293165764534, DIRECT, f08c47fec0942fa0
-
 mars.media, 1010442, RESELLER, 8624339f102fb076
 rubiconproject.com, 25064, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 26156, RESELLER, 0bfd66d529a55807
@@ -301,3 +299,4 @@ improvedigital.com, 2609, RESELLER
 improvedigital.com, 2371, RESELLER
 lunamedia.io, 2fdb16a1-5025-4c41-9b17-e01e47ebc8b4, RESELLER, 524ecb396915caaf
 tradplusad.com, b3fca24bd11c1242, RESELLER
+google.com, pub-6758293165764534, DIRECT, f08c47fec0942fa0
