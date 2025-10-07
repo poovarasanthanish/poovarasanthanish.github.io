@@ -1,90 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My App</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #f4f4f9;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 500px;
-            margin: 50px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        img.logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 25%;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        p.description {
-            color: #555;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-        a.button {
-            display: inline-block;
-            text-decoration: none;
-            color: white;
-            background: #3498db;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        a.button:hover {
-            background: #2980b9;
-        }
-        .social-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #555;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Apps</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: #f9fafc;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    /* Banner */
+    header {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: #fff;
+        padding: 40px 20px 60px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    header img.logo-main {
+        width: 120px;
+        height: 120px;
+        border-radius: 25%;
+        margin-bottom: 20px;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+    header img.logo-main:hover {
+        transform: rotate(10deg);
+    }
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    header p.tagline {
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: 400;
+        color: #f0f0f0;
+    }
+
+    /* App grid */
+    .container {
+        max-width: 1200px;
+        margin: -50px auto 30px auto; /* overlap banner */
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    /* App cards */
+    .app-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 25px 15px;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .app-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+    }
+
+    .app-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20%;
+        margin-bottom: 15px;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+    .app-card img:hover {
+        transform: scale(1.1);
+    }
+
+    .app-card h2 {
+        font-size: 20px;
+        margin: 10px 0 5px 0;
+        color: #2c3e50;
+    }
+
+    .app-card p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .app-card a.button {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 500;
+        transition: transform 0.3s, background 0.3s;
+    }
+    .app-card a.button:hover {
+        background: #2980b9;
+        transform: scale(1.05);
+    }
+
+    footer {
+        text-align: center;
+        padding: 25px 20px;
+        color: #555;
+        font-size: 14px;
+        background: #f1f3f6;
+        margin-top: 40px;
+    }
+    footer a {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: 500;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        header h1 {
             font-size: 24px;
         }
-        .social-links a:hover {
-            color: #3498db;
+        header p.tagline {
+            font-size: 16px;
         }
-    </style>
-    <!-- Optional: Include Font Awesome for social icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    }
+</style>
+<!-- Font Awesome for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <!-- App Logo -->
-        <img src="logo.png" alt="App Logo" class="logo">
 
-        <!-- App Name -->
-        <h1>My Awesome App</h1>
+<header>
+    <!-- Main logo -->
+    <img src="logo-main.png" alt="Main Logo" class="logo-main">
+    <h1>My Apps Collection</h1>
+    <p class="tagline">Discover and download all our amazing apps in one place</p>
+</header>
 
-        <!-- App Description -->
-        <p class="description">
-            This app helps you do amazing things easily! Track progress, connect with friends, and explore more features.
-        </p>
-
-        <!-- Download Button -->
-        <a href="https://play.google.com/store/apps/details?id=com.example.app" class="button" target="_blank">
-            Download App
-        </a>
-
-        <!-- Social Media Links -->
-        <div class="social-links">
-            <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
+<div class="container">
+    <!-- Example App 1 -->
+    <div class="app-card">
+        <img src="app1-logo.png" alt="App 1 Logo">
+        <h2>App One</h2>
+        <p>Track tasks, stay productive, and enjoy amazing features!</p>
+        <a href="https://play.google.com/store/apps/details?id=com.example.app1" class="button" target="_blank">Download</a>
     </div>
+
+    <!-- Example App 2 -->
+    <div class="app-card">
+        <img src="app2-logo.png" alt="App 2 Logo">
+        <h2>App Two</h2>
+        <p>Simplify daily activities and boost your productivity effortlessly.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.example.app2" class="button" target="_blank">Download</a>
+    </div>
+
+    <!-- Example App 3 -->
+    <div class="app-card">
+        <img src="app3-logo.png" alt="App 3 Logo">
+        <h2>App Three</h2>
+        <p>Fun, interactive, and easy-to-use app for entertainment and learning.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.example.app3" class="button" target="_blank">Download</a>
+    </div>
+
+    <!-- Add more apps here by duplicating app-card -->
+</div>
+
+<footer>
+    &copy; 2025 My Apps | Follow us: 
+    <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+    <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+</footer>
+
 </body>
 </html>
