@@ -3,19 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Village Fast</title>
+    <title>My App</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #2c3e50; }
-        p { color: #34495e; }
-        a { text-decoration: none; color: white; background: #3498db; padding: 10px 20px; border-radius: 5px; }
-        a:hover { background: #2980b9; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f9;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        img.logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 25%;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p.description {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        a.button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: #3498db;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        a.button:hover {
+            background: #2980b9;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #555;
+            font-size: 24px;
+        }
+        .social-links a:hover {
+            color: #3498db;
+        }
     </style>
+    <!-- Optional: Include Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Welcome to Village Fast!</h1>
-    <p>Thank you for checking out my app.</p>
-    <a href="https://play.google.com/store/apps/details?id=https://play.google.com/store/apps/dev?id=7832179568002340154" target="_blank">Download App</a>
+    <div class="container">
+        <!-- App Logo -->
+        <img src="logo.png" alt="App Logo" class="logo">
+
+        <!-- App Name -->
+        <h1>My Awesome App</h1>
+
+        <!-- App Description -->
+        <p class="description">
+            This app helps you do amazing things easily! Track progress, connect with friends, and explore more features.
+        </p>
+
+        <!-- Download Button -->
+        <a href="https://play.google.com/store/apps/details?id=com.example.app" class="button" target="_blank">
+            Download App
+        </a>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
 </body>
 </html>
-
